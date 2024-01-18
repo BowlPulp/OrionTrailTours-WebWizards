@@ -1,0 +1,127 @@
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    width: 100vw;
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; */
+    display: grid;
+   }
+.main-signup{
+  display: flex;
+  margin: auto;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 15px;
+  background: #E8E9EB;
+}
+.left{
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+.left img{
+  width: 95%;
+  height: 90%;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.right{
+  width: 50%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.rightContent{
+  width: 95%;
+  height: 90%;
+  background-color: #E2F4FF;
+  border-radius: 20px;
+}
+
+.rightContent h1{
+  display: flex;
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 30px;
+  color: #4A65C0;
+  font-size: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+}
+.Email{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.Email span{
+  margin-left: 10%;
+  padding-bottom: 20px;
+  font-size: x-large;
+  font-weight: 500;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.email-in{
+  width: 80%;
+  margin-left: 10%;
+  border-bottom: 2px solid #5BB1E0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  background-color: transparent;
+}
+
+
+.Password{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10%;
+}
+.Password span{
+  margin-left: 10%;
+  padding-bottom: 20px;
+  font-size: x-large;
+  font-weight: 500;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Password-in{
+  width: 80%;
+  margin-left: 10%;
+  border-bottom: 2px solid #5BB1E0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  background-color: transparent;
+}
+.Signin{
+  
+}
+.signinBtn{
+  margin-left: 10%;
+  padding: 10px 37%;
+  display: inline-block;
+  background-color: #FF7271;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 2px;
+  border-radius: 50px;
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+.signinBtn:hover{
+  background-color: #FFCC3F;
+  color: #4A65C0;
+
+}

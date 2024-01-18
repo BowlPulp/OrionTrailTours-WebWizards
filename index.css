@@ -1,0 +1,554 @@
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Open Sans';
+  }
+ 
+  body {
+    background: rgb(250, 250, 250) url(http://lorempixel.com/1920/1080/nature/);
+    font-family: Lato, Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+  }
+
+  #navbar {
+    background: #e9edf0;
+    color: rgb(13, 26, 38);
+    position: fixed;
+    top: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 100vw;
+    z-index: 10;
+  }
+  
+  .nav-wrapper {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+  } @media(max-width: 768px) {
+      .nav-wrapper {
+        width: 90%;
+      }
+    } @media(max-width: 638px) {
+        .nav-wrapper {
+          width: 100%;
+        }
+      } 
+  
+  
+  .logo {
+    float: left;
+    margin-left: 28px;
+    font-size: 1.5em;
+    height: 60px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  } @media(max-width: 768px) {
+      .logo {
+
+      }
+    }
+  
+  #navbar ul {
+    display: inline-block;
+    float: right;
+    list-style: none;
+    /* margin-right: 14px; */
+    margin-top: -2px;
+    text-align: right;
+    transition: transform 0.5s ease-out;
+    -webkit-transition: transform 0.5s ease-out;
+  } @media(max-width: 640px) {
+      #navbar ul {
+        display: none;
+      }
+    } @media(orientation: landscape) {
+        #navbar ul {
+          display: inline-block;
+        }
+      }
+  
+  #navbar li {
+    display: inline-block;
+  }
+  
+  #navbar li a {
+    color: rgb(13, 26, 38);
+    display: block;
+    font-size: 0.7em;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    padding: 0 4px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+  }
+  
+  #navbar li a:hover {
+    color: rgb(28, 121, 184);
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+  }
+  
+  #navbar li a:before, #navbar li a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -1px;
+    background: rgb(13, 26, 38);
+  }
+  
+  #navbar li a:before {
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  #navbar li a:after {
+    background: rgb(13, 26, 38);
+    right: 0;
+  }
+  
+  #navbar li a:hover:before {
+    background: rgb(13, 26, 38);
+    width: 100%;
+    transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+  }
+  
+  #navbar li a:hover:after {
+    background: transparent;
+    width: 100%;
+    /* transition: 0s; */
+  }
+  
+
+  @media(max-width: 640px) {
+    .menuIcon {
+      cursor: pointer;
+      display: block;
+      position: fixed;
+      right: 15px;
+      top: 20px;
+      height: 23px;
+      width: 27px;
+      z-index: 12;
+    }
+  
+    /* Icon Bars */
+    .icon-bars {
+      background: rgb(13, 26, 38);
+      position: absolute;
+      left: 1px;
+      top: 45%;
+      height: 2px;
+      width: 20px;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    } 
+  
+    .icon-bars::before {
+      background: rgb(13, 26, 38);
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -8px;
+      height: 2px;
+      width: 20px;
+      -webkit-transition: 0.3s width 0.4s;
+      transition: 0.3s width 0.4s;
+    }
+  
+    .icon-bars::after {
+      margin-top: 0px;
+      background: rgb(13, 26, 38);
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      height: 2px;
+      width: 20px;
+      -webkit-transition: 0.3s width 0.4s;
+      transition: 0.3s width 0.4s;
+    }
+  
+    .icon-bars.overlay {
+      background: rgb(97, 114, 129);
+      background: rgb(183, 199, 211);
+      width: 20px;
+      animation: middleBar 3s infinite 0.5s;
+      -webkit-animation: middleBar 3s infinite 0.5s;
+    } @keyframes middleBar {
+        0% {width: 0px}
+        50% {width: 20px}
+        100% {width: 0px}
+      } @-webkit-keyframes middleBar {
+          0% {width: 0px}
+          50% {width: 20px}
+          100% {width: 0px}
+        }
+  
+    .icon-bars.overlay::before {
+      background: rgb(97, 114, 129);
+      background: rgb(183, 199, 211);
+      width: 10px;
+      animation: topBar 3s infinite 0.2s;
+      -webkit-animation: topBar 3s infinite 0s;
+    } @keyframes topBar {
+        0% {width: 0px}
+        50% {width: 10px}
+        100% {width: 0px}
+      } @-webkit-keyframes topBar {
+          0% {width: 0px}
+          50% {width: 10px}
+          100% {width: 0px}
+        }
+  
+    .icon-bars.overlay::after {
+      background: rgb(97, 114, 129);
+      background: rgb(183, 199, 211);
+      width: 15px;
+      animation: bottomBar 3s infinite 1s;
+      -webkit-animation: bottomBar 3s infinite 1s;
+    } @keyframes bottomBar {
+        0% {width: 0px}
+        50% {width: 15px}
+        100% {width: 0px}
+      } @-webkit-keyframes bottomBar {
+          0% {width: 0px}
+          50% {width: 15px}
+          100% {width: 0px}
+        }
+  
+  
+    /* Toggle Menu Icon */
+    .menuIcon.toggle .icon-bars {
+      top: 5px;
+      transform: translate3d(0, 5px, 0) rotate(135deg);
+      transition-delay: 0.1s;
+      transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  
+    .menuIcon.toggle .icon-bars::before {
+      top: 0;
+      transition-delay: 0.1s;
+      opacity: 0;
+    }
+  
+    .menuIcon.toggle .icon-bars::after {
+      top: 10px;
+      transform: translate3d(0, -10px, 0) rotate(-270deg);
+      transition-delay: 0.1s;
+      transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  
+    .menuIcon.toggle .icon-bars.overlay {
+      width: 20px;
+      opacity: 0;
+      -webkit-transition: all 0s ease 0s;
+      transition: all 0s ease 0s;
+    }
+  }
+  .overlay-menu {
+    background: lightblue;
+    color: rgb(13, 26, 38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 15px;
+    transform: translateX(-100%);
+    width: 100vw;
+    height: 100vh;
+    -webkit-transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out;
+  }
+  
+  .overlay-menu ul, .overlay-menu li {
+    display: block;
+    position: relative;
+  }
+  
+  .overlay-menu li a {
+    display: block;
+    font-size: 1.8em;
+    letter-spacing: 4px;
+  /*   opacity: 0; */
+    padding: 10px 0;
+    text-align: right;
+    text-transform: uppercase;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  /*   -webkit-transition: 0.2s opacity 0.2s ease-out;
+    transition: 0.2s opacity 0.2s ease-out; */
+  }
+  
+  .overlay-menu li a:hover,
+  .overlay-menu li a:active {
+    color: rgb(28, 121, 184);
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+
+
+/*-----------------------------------------------------------------------*/
+.container-info {
+  font-family:'Open Sans';font-size: 3.5vh;
+  z-index:-1;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fbfbfe; }
+  @media (min-width: 768px) {
+    .container-info {
+      float: left;
+      /*position: fixed;*/
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 50%; } }
+
+.container-main {
+  font-family:'Open Sans';font-size: 3.5vh;
+  z-index: -1;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background:url(https://static.vecteezy.com/system/resources/previews/024/448/956/large_2x/space-wallpaper-banner-background-stunning-view-of-a-cosmic-galaxy-with-planets-and-space-objects-elements-of-this-image-furnished-by-nasa-generate-ai-free-photo.jpg) ; }
+  @media (min-width: 768px) {
+    .container-main {
+      float: right;
+      /*position: fixed;*/
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 50%; } }
+/* Page Split Above ---------------------------------------------------------------------------*/
+      .split {
+        /* font-family:'Open Sans';font-size: 3.5vh; */
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+      }
+      
+      /* Control the left side */
+      .left {
+        left: 0;
+        background-color: #d3d3d3;
+        width: 50%;
+      }
+      
+      /* Control the right side */
+      .right {
+        right: 0;
+        background-color: #e08f62;
+        width: 50%;
+      }
+      
+      .centered {
+        font-family:'Open Sans';font-size: 2.5vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      
+  
+      .centered img {
+        width: 50vh;
+        margin-top:10%;
+        border-radius: 2.5%;
+        margin-bottom: 2vh;
+      }
+    
+      button {
+        margin-top: 8vh;
+        padding: 1vh;
+        border-radius:2%;
+        font-size: large;
+        background-color: #302c2c;
+        color: white;
+        /* width: 40%; */
+        width: fit-content;
+        transition: 0.2s;
+        overflow: hidden;
+      }
+      
+      button:hover{
+        color: #e08f64;
+      }
+    
+      button:active{
+        background-color: #d3d3d3;
+        border: 1px #000000 solid;
+      }
+      .emailbtn {
+          margin-top: 3vh;
+          padding: 1vh;
+          margin-bottom: 2vh;
+          border-radius:7px;
+          font-size: large;
+          background-color: #302c2c;
+          color: white;
+          width: 68%;
+      }
+    
+    .social-icon {
+      color: #302c2c;
+      transition: 0.2s;
+      text-decoration: none;
+      padding: 8px;
+    }
+    
+    .social-icon:hover {
+      color: #e08f64;
+    }
+
+    .righttext {
+      color: white !important; 
+      font-size: x-large;
+    }
+
+
+
+
+
+    .page4  h1{
+      font-size: 3rem;
+    }
+    
+    .pricing-plans {
+      gap: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      padding: 64px;
+    }
+    
+    .pricing-card {
+      --col: #e4e4e7;
+      position: relative;
+      min-width: 360px;
+      padding: 32px;
+      padding-bottom: 96px;
+      border-radius: 4px;
+      border: 1px solid #262626;
+      /* background-color: #26262620; */
+      background-color: white;
+      box-shadow: 0 0 32px transparent;
+      text-align: center;
+    }
+    
+    .pricing-card.basic {
+      --col: #90a5b8;
+    }
+    
+    .pricing-card.standard {
+      --col: #fbdc16;
+    }
+    
+    .pricing-card.premium {
+      --col: #01CFFF;
+    }
+    
+    .pricing-card:hover {
+      border-color: var(--col);
+      /* background-color: #26262680; */
+      background-color: white;
+      box-shadow: 0 0 32px #171717;
+      transform: translateY(-16px) scale(1.02);
+      transition: all 0.5s ease;
+    }
+    
+    .pricing-card > *:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    
+    .pricing-card .heading h4 {
+      padding-bottom: 12px;
+      color: var(--col);
+      font-size: 24px;
+      font-weight: normal;
+    }
+    
+    .pricing-card .heading p {
+      color: #a3a3a3;
+      font-size: 14px;
+      font-weight: lighter;
+    }
+    
+    .pricing-card .price {
+      position: relative;
+      color: var(--col);
+      font-size: 60px;
+      font-weight: bold;
+    }
+    
+    .pricing-card .price sub {
+      position: absolute;
+      bottom: 14px;
+      color: #a3a3a3;
+      font-size: 14px;
+      font-weight: lighter;
+    }
+    
+    .pricing-card .features li {
+      padding-bottom: 16px;
+      color: #a3a3a3;
+      font-size: 16px;
+      font-weight: lighter;
+      text-align: left;
+    }
+    
+    .pricing-card .features li i,
+    .pricing-card .features li strong {
+      color: #515151;
+      font-size: 16px;
+      text-align: left;
+    }
+    
+    .pricing-card .features li strong {
+      padding-left: 24px;
+    }
+    
+    .pricing-card .cta-btn {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      padding: 12px;
+      border-radius: 4px;
+      border: 1px solid var(--col);
+      background-color: var(--col);
+      color: #293948;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .pricing-card .cta-btn:active {
+      background-color: transparent;
+      color: var(--col);
+      transition: all 0.3s ease;
+    }
+    
