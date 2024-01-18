@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/x-icon" href="Logo.png">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>  <!--Font-->
-    <script src="navbar.js"></script>
+    <script src="https://kit.fontawesome.com/e2c728a258.js" crossorigin="anonymous"></script> <!----Icons-->
+    <script src="index.js"></script>
     <title>Orion Trail Tours</title>
 </head>
 <body>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <nav id="navbar" class="">
-  <div class="nav-wrapper">
+    <div class="nav-wrapper">
     <!-- Navbar Logo -->
     <div class="logo">
         <!-- Logo Placeholder for Inlustration -->
@@ -23,13 +24,12 @@
     <ul id="menu">
       <li><a href="#home">Home</a></li><!--
    --><li><a href="#services">Services</a></li><!--
-   --><li><a href="#about">About</a></li><!--
+   --><li><a href="#aboutus">About</a></li><!--
    --><li><a href="#contact">Contact</a></li>
       <li><a href="Signin.html">Sign in</a></li>
     </ul>
   </div>
 </nav>
-
 
 <!-- Menu Icon -->
 <div class="menuIcon">
@@ -37,18 +37,17 @@
   <span class="icon icon-bars overlay"></span>
 </div>
 
-
 <div class="overlay-menu">
   <ul id="menu">
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#aboutus">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 </div>
 
-<!--------------------About Section PAGE-------------------->
-        <section>
+<!--------------------Home Section PAGE-------------------->
+        <section id="home">
             <div class="container-info">			
                 <!-- <div class="split left"> -->
                     <div class="centered">
@@ -81,11 +80,9 @@
               </div>
            </div>
         </section>
-        <!--------------------------------->
-
-<!----------------------------------------------ABOUT SECTION ENDS HERE-->
-<div class="page4" id="create">
-    <section class="pricing-plans">
+        <!----------------------------------------------ABOUT SECTION ENDS HERE-->
+        <div class="page4" id="create">
+        <section class="pricing-plans" id="services">
         <div class="pricing-card basic">
           <div class="heading">
             <h4>Celestial Explorer Package:</h4>
@@ -226,7 +223,101 @@
           <a href="#"><button class="cta-btn">SELECT</button></a>
         </div>
       </section>
+        <!----------------------About US----------------------------------->
+      <section id="aboutus">
+      <div class="about">
+        <div class="about-container">
+            <h1>About Us</h1>
+            <p>🚀 Space-Themed Experiences: Our company stands out for crafting immersive and thematic travel experiences centered around space exploration.</p>
+            <p>⭐ Innovative Packages: The company's offerings go beyond conventional travel packages. </p>
+            <p>🌳 Environmental Responsibility: Orion Trail Tours takes pride in its commitment to responsible and sustainable space tourism.</p>
+            <div class="about_contact"><a href="{% url 'contact' %}"><button class="contactbtn">Contact</button></a></div>
+        </div>
+    </div>
+    </section>
+    <!--------------------------------------------------------->
+
+    <div class="page6" id="contact">
+      <div class="footer">
+          <footer class="footer-distributed">
+              <div class="footer-left">
+                <h3>Orion Pvt Ltd.<span><img style="height: 20vh;" src="../../assets/Images/logp.png" alt=""></span></h3>
+                <p class="footer-company-name">Orion Pvt Ltd © 2023</p>
+              </div>
+              <div class="footer-center">
+                <div>
+                  <i class="fa fa-map-marker"></i>
+                  <p><span>Chitkara University</span> Rajpura Punjab, India</p>
+                </div>
+                <div>
+                  <i class="fa fa-phone"></i>
+                  <p>+91.1234567890</p>
+                </div>
+                <div>
+                  <i class="fa fa-envelope"></i>
+                  <p><a href="mailto:support@company.com">support@company.com</a></p>
+                </div>
+              </div>
+              <div class="footer-right">
+                <p style="color: white;" class="footer-company-about">
+                  <span>About the company</span>
+                  We are a space travel tours company, which relies on safety and excellency in our work. This sets us apart in the travel and tourism industry!
+                </p>
+                <div class="footer-icons">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+              </div>
+            </footer>
+      </div>
+  </div>
 </div>
+<!--------------Deployed link-->
+<!-- 
+<form 
+  method="POST" 
+  action="https://script.google.com/macros/s/AKfycbyPTusSL7BROPgfq0pBbkD6GZy7XTDjpWfs8qvGm8jxwbdGUaMjk5tG50XGVYrad4X_/exec"
+>
+  <input name="Email" type="email" placeholder="Email" required>
+  <input name="Name" type="text" placeholder="Name" required>
+  <button type="submit">Send</button>
+</form> -->
+<!----------------ends - deployed-->
+
+
+<script>
+
+
+  let menuIcon = document.querySelector('.menuIcon');
+    let nav = document.querySelector('.overlay-menu');
+    
+    menuIcon.addEventListener('click', () => {
+        if (nav.style.transform != 'translateX(0%)') {
+            nav.style.transform = 'translateX(0%)';
+            nav.style.transition = 'transform 0.2s ease-out';
+        } else { 
+            nav.style.transform = 'translateX(-100%)';
+            nav.style.transition = 'transform 0.2s ease-out';
+        }
+    });
+    
+    
+    // Toggle Menu Icon ========================================
+    let toggleIcon = document.querySelector('.menuIcon');
+    
+    toggleIcon.addEventListener('click', () => {
+        if (toggleIcon.className != 'menuIcon toggle') {
+            toggleIcon.className += ' toggle';
+        } else {
+            toggleIcon.className = 'menuIcon';
+        }
+    });
+</script>
 
 </body>
+
+
+
 </html>
