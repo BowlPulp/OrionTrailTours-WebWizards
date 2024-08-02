@@ -1,5 +1,26 @@
 
-Website has been created only using Html and css, and is also responsive to phone/tabs.
-Database would be saved on a google sheet.
+# Project Title
 
-Ended up being winners in the event! 🥰
+Task: Create a website only using HTML, CSS, and Javascript. No other libraries allowed.
+
+Event: Web Wizards - IE(I) CSE Student Chapter - January 18,2024
+
+Teams: 20
+
+
+## Demo
+
+Live hosted at - https://bowlpulp.github.io/OrionTrailTours-WebWizards/
+
+
+## Screen Recording
+
+https://github.com/user-attachments/assets/2b700b22-fbaa-422f-b21a-579d3b129ca4
+
+
+## Authors
+
+- [@BowlPulp](http://github.com/BowlPulp)
+- [@JatinJaglan347](https://github.com/JatinJaglan347)
+
+
