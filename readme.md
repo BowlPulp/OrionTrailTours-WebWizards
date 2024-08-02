@@ -7,6 +7,7 @@ Event: Web Wizards - IE(I) CSE Student Chapter - January 18,2024
 
 Teams: 20
 
+Note: We ended up winning the competition! 
 
 ## Demo
 
